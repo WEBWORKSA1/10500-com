@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+{% if page.dyn_base %}<script>document.write('<base href="'+(location.pathname.indexOf('/10500-com/')===0?'/10500-com/':'/')+'">')</script>{% endif %}
+{% if page.title contains "10500" %}{% assign full_title = page.title %}{% else %}{% capture full_title %}{{ page.title }} | 10500{% endcapture %}{% endif %}
+<title>{{ full_title | escape }}</title>
+<meta name="description" content="{{ page.description | escape }}">
+{% if page.noindex %}<meta name="robots" content="noindex,follow">{% else %}<meta name="robots" content="index,follow,max-image-preview:large">{% endif %}
+<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+<meta property="og:type" content="{% if page.article %}article{% else %}website{% endif %}">
+<meta property="og:site_name" content="10500">
+<meta property="og:title" content="{{ full_title | escape }}">
+<meta property="og:description" content="{{ page.description | escape }}">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#c8202f">
+<link rel="icon" href="{{ page.base }}assets/img/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="{{ page.base }}manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Noto+Serif+SC:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ page.base }}assets/css/style.css">
+<script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"{{ site.url }}/#org","name":"10500.com","url":"{{ site.url }}/","logo":"{{ site.url }}/assets/img/logo.svg"},{"@type":"WebSite","@id":"{{ site.url }}/#site","name":"10500 — Numbers · Luck · Prosperity","url":"{{ site.url }}/","publisher":{"@id":"{{ site.url }}/#org"},"potentialAction":{"@type":"SearchAction","target":"{{ site.url }}/search.html?q={q}","query-input":"required name=q"}}{% if page.faq %},{"@type":"FAQPage","mainEntity":[{% for f in page.faq %}{"@type":"Question","name":{{ f[0] | jsonify }},"acceptedAnswer":{"@type":"Answer","text":{{ f[1] | jsonify }}}}{% unless forloop.last %},{% endunless %}{% endfor %}]}{% endif %}{% if page.article %},{"@type":"Article","headline":{{ page.title | jsonify }},"description":{{ page.description | jsonify }},"datePublished":"{{ page.date | date: "%Y-%m-%d" }}","dateModified":"{{ site.time | date: "%Y-%m-%d" }}","author":{"@type":"Organization","name":"10500 Editorial"},"publisher":{"@id":"{{ site.url }}/#org"},"mainEntityOfPage":"{{ site.url }}{{ page.url }}"}{% endif %}{% if page.app %},{"@type":"WebApplication","name":{{ page.title | jsonify }},"applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"{{ site.url }}{{ page.url }}"}{% endif %}{% if page.crumbs %},{"@type":"BreadcrumbList","itemListElement":[{% for c in page.crumbs %}{"@type":"ListItem","position":{{ forloop.index }},"name":{{ c[0] | jsonify }},"item":"{{ site.url }}/{{ c[1] }}"}{% unless forloop.last %},{% endunless %}{% endfor %}]}{% endif %}]}</script>
+</head>
+<body data-base="{{ page.base }}"{% if page.no_exit %} data-no-exit{% endif %}>
+<a class="skip" href="#main">Skip to content</a>
+<div class="topbar" role="note"><a href="https://web.works/contact" target="_blank" rel="noopener">Contact, if you are interested in this website / domain name / Sponsorship / Advertisement / Partnership</a></div>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="{{ page.base }}index.html" aria-label="10500 home"><span class="brand-mark" aria-hidden="true">万</span><span>10500<small>Numbers · Luck · Prosperity</small></span></a>
+    <nav aria-label="Main"><ul class="menu"><li><button type="button" aria-expanded="false" aria-haspopup="true">Tools ▾</button><ul class="dropdown"><li><a href="{{ page.base }}lucky-number-analyzer.html"><div><b>Lucky Number Analyzer</b><span>Score any phone, plate, price or date</span></div></a></li><li><a href="{{ page.base }}chinese-number-converter.html"><div><b>Chinese Number Converter</b><span>Numbers ⇄ 汉字 · 大写 cheque format</span></div></a></li><li><a href="{{ page.base }}red-envelope-calculator.html"><div><b>Red Envelope Calculator</b><span>How much to put in a hongbao</span></div></a></li><li><a href="{{ page.base }}chinese-zodiac.html"><div><b>Zodiac &amp; Lunar Date</b><span>Accurate sign + compatibility</span></div></a></li><li><a href="{{ page.base }}china-salary-calculator.html"><div><b>China Salary Calculator</b><span>Net pay after tax &amp; insurance</span></div></a></li><li><a href="{{ page.base }}tools.html"><div><b>All tools →</b></div></a></li></ul></li><li><button type="button" aria-expanded="false" aria-haspopup="true">Learn ▾</button><ul class="dropdown"><li><a href="{{ page.base }}number-meanings.html"><div><b>Number Meanings</b><span>0–9 + 40 lucky &amp; unlucky combos</span></div></a></li><li><a href="{{ page.base }}learn-chinese-numbers.html"><div><b>Learn Chinese Numbers</b><span>Lessons, audio &amp; quiz game</span></div></a></li><li><a href="{{ page.base }}videos.html"><div><b>Video Library</b><span>Hand-picked lessons &amp; explainers</span></div></a></li><li><a href="{{ page.base }}blog.html"><div><b>Guides &amp; Articles</b><span>Deep dives on numbers &amp; culture</span></div></a></li></ul></li><li><button type="button" aria-expanded="false" aria-haspopup="true">Business ▾</button><ul class="dropdown"><li><a href="{{ page.base }}china-business.html"><div><b>China Business Guide</b><span>Numbers, etiquette, wages, sourcing</span></div></a></li><li><a href="{{ page.base }}concierge.html"><div><b>Expert Concierge</b><span>Sourcing, market entry, naming</span></div></a></li><li><a href="{{ page.base }}advertise.html"><div><b>Advertise &amp; Sponsor</b><span>Reach our audience</span></div></a></li></ul></li><li><button type="button" aria-expanded="false" aria-haspopup="true">Community ▾</button><ul class="dropdown"><li><a href="{{ page.base }}contests.html"><div><b>Contests &amp; Prizes</b><span>Monthly Lucky Number Challenge</span></div></a></li><li><a href="{{ page.base }}careers.html"><div><b>Careers &amp; Creators</b><span>Write, film, translate with us</span></div></a></li><li><a href="{{ page.base }}support.html"><div><b>Support 10500</b><span>Donate &amp; become a patron</span></div></a></li><li><a href="{{ page.base }}about.html"><div><b>About</b><span>Our mission</span></div></a></li></ul></li></ul></nav>
+    <div class="nav-actions">
+      <a class="icon-btn" href="{{ page.base }}search.html" aria-label="Search">⌕</a>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle dark mode">☾</button>
+      <a class="btn btn-primary btn-sm nav-cta" href="{{ page.base }}concierge.html">Get Expert Help</a>
+      <button class="icon-btn burger" type="button" data-burger aria-expanded="false" aria-controls="mobile-menu" aria-label="Menu">☰</button>
+    </div>
+  </div>
+  <div class="container mobile-menu" id="mobile-menu"><h4>Tools</h4><a href="{{ page.base }}lucky-number-analyzer.html">Lucky Number Analyzer</a><a href="{{ page.base }}chinese-number-converter.html">Chinese Number Converter</a><a href="{{ page.base }}red-envelope-calculator.html">Red Envelope Calculator</a><a href="{{ page.base }}chinese-zodiac.html">Zodiac &amp; Lunar Date</a><a href="{{ page.base }}china-salary-calculator.html">China Salary Calculator</a><a href="{{ page.base }}tools.html">All tools →</a><h4>Learn</h4><a href="{{ page.base }}number-meanings.html">Number Meanings</a><a href="{{ page.base }}learn-chinese-numbers.html">Learn Chinese Numbers</a><a href="{{ page.base }}videos.html">Video Library</a><a href="{{ page.base }}blog.html">Guides &amp; Articles</a><h4>Business</h4><a href="{{ page.base }}china-business.html">China Business Guide</a><a href="{{ page.base }}concierge.html">Expert Concierge</a><a href="{{ page.base }}advertise.html">Advertise &amp; Sponsor</a><h4>Community</h4><a href="{{ page.base }}contests.html">Contests &amp; Prizes</a><a href="{{ page.base }}careers.html">Careers &amp; Creators</a><a href="{{ page.base }}support.html">Support 10500</a><a href="{{ page.base }}about.html">About</a><p style="margin-top:16px"><a class="btn btn-primary btn-block" href="{{ page.base }}concierge.html" style="color:#fff">Get Expert Help</a></p></div>
+</header>
+<main id="main">
+{{ content }}
+{% if page.faq and page.faq_inline != true %}<section><div class="container" style="max-width:860px"><div class="section-head"><span class="eyebrow">FAQ</span><h2>Frequently asked questions</h2></div>{% for f in page.faq %}<details class="faq"><summary>{{ f[0] | escape }}</summary><div>{{ f[1] }}</div></details>{% endfor %}</div></section>{% endif %}
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="{{ page.base }}index.html" style="color:#fff"><span class="brand-mark">万</span><span>10500<small style="color:#9a96a3">Numbers · Luck · Prosperity</small></span></a>
+        <p class="small" style="margin-top:14px">一万零五百: free tools, guides and videos about Chinese numbers, luck and doing business with China.</p>
+        <form data-form="Newsletter (footer)" class="inline-form" data-success="You're in! Look out for your first Lucky Number email.">
+          <label class="hp" for="nl-foot">Email</label>
+          <input id="nl-foot" type="email" name="email" required placeholder="Your email" aria-label="Email for newsletter">
+          <button class="btn btn-gold btn-sm" type="submit">Subscribe</button>
+          <input type="hidden" name="list" value="weekly-lucky-number">
+        </form>
+        <p class="small" style="margin-top:8px;color:#9a96a3">Weekly lucky number, new tools, contest alerts. Unsubscribe anytime.</p>
+      </div>
+      <div><h4>Tools</h4><ul><li><a href="{{ page.base }}lucky-number-analyzer.html">Lucky Number Analyzer</a></li><li><a href="{{ page.base }}chinese-number-converter.html">Number Converter</a></li><li><a href="{{ page.base }}red-envelope-calculator.html">Red Envelope Calculator</a></li><li><a href="{{ page.base }}chinese-zodiac.html">Chinese Zodiac</a></li><li><a href="{{ page.base }}china-salary-calculator.html">China Salary Calculator</a></li></ul></div><div><h4>Learn</h4><ul><li><a href="{{ page.base }}number-meanings.html">Number Meanings</a></li><li><a href="{{ page.base }}learn-chinese-numbers.html">Learn Chinese Numbers</a></li><li><a href="{{ page.base }}videos.html">Videos</a></li><li><a href="{{ page.base }}blog.html">Guides &amp; Articles</a></li><li><a href="{{ page.base }}search.html">Search</a></li></ul></div><div><h4>Business</h4><ul><li><a href="{{ page.base }}concierge.html">Expert Concierge</a></li><li><a href="{{ page.base }}china-business.html">China Business Guide</a></li><li><a href="{{ page.base }}advertise.html">Advertise &amp; Sponsor</a></li><li><a href="{{ page.base }}advertise.html#partner">Partnerships</a></li><li><a href="{{ page.base }}contact.html">Contact</a></li></ul></div><div><h4>Community</h4><ul><li><a href="{{ page.base }}contests.html">Contests &amp; Prizes</a></li><li><a href="{{ page.base }}careers.html">Careers</a></li><li><a href="{{ page.base }}support.html">Support Us</a></li><li><a href="{{ page.base }}about.html">About</a></li><li><a href="{{ page.base }}disclaimer.html#trademark">Trademark &amp; Copyright</a></li></ul></div>
+    </div>
+    <div class="foot-bottom">
+      <div>© <span data-year></span> 10500.com · An independent publication. Not affiliated with any company, government or brand. <a href="{{ page.base }}disclaimer.html#trademark">Trademark &amp; Copyright</a></div>
+      <div><a href="{{ page.base }}privacy.html">Privacy</a> · <a href="{{ page.base }}terms.html">Terms</a> · <a href="{{ page.base }}disclaimer.html">Disclaimer</a> · <a href="{{ page.base }}contact.html">Contact</a> · <a href="https://web.works/contact" target="_blank" rel="noopener">Buy / Sponsor this site</a></div>
+    </div>
+  </div>
+</footer>
+<div class="ad-anchor" role="complementary" aria-label="Sponsored"><button class="modal-close" style="position:absolute;right:6px;top:-2px;font-size:1.1rem" data-anchor-close aria-label="Close">×</button><div class="ad-slot" data-slot="anchor" style="margin:0;min-height:50px"></div></div>
+<a class="btn btn-primary float-cta" href="{{ page.base }}concierge.html">Get Expert Help →</a>
+<div class="cookie" id="cookie" role="dialog" aria-label="Cookie consent">
+  <p><b>Cookies & ads.</b> We use essential storage and, with your consent, analytics and personalised ads (Google AdSense) to keep 10500 free. <a href="{{ page.base }}privacy.html#cookies">Learn more</a></p>
+  <div class="inline-form"><button class="btn btn-primary btn-sm" data-cookie="all">Accept all</button><button class="btn btn-ghost btn-sm" data-cookie="essential">Essential only</button></div>
+</div>
+<div class="modal" id="lead-modal" role="dialog" aria-modal="true" aria-labelledby="lm-title">
+  <div class="modal-box">
+    <button class="modal-close" data-close aria-label="Close">×</button>
+    <span class="eyebrow">Free download</span>
+    <h2 id="lm-title" style="font-size:1.6rem">Get the Lucky Number Cheat Sheet</h2>
+    <p class="muted">All 10 digits, 40 combinations to use or avoid, and red-envelope amounts by occasion. We'll also send one lucky number a week.</p>
+    <form data-form="Lead magnet — Cheat Sheet" data-success="Check your inbox! Your cheat sheet is on its way.">
+      <div class="field"><label for="lm-name">First name</label><input id="lm-name" type="text" name="name" autocomplete="given-name"></div>
+      <div class="field"><label for="lm-email">Email *</label><input id="lm-email" type="email" name="email" required autocomplete="email"></div>
+      <label class="check"><input type="checkbox" name="consent" value="yes" required> I agree to receive emails from 10500.com and accept the <a href="{{ page.base }}privacy.html">Privacy Policy</a>.</label>
+      <button class="btn btn-primary btn-block" style="margin-top:14px" type="submit">Send me the cheat sheet</button>
+      <p class="form-note">No spam. Unsubscribe in one click.</p>
+    </form>
+  </div>
+</div>
+<script src="{{ page.base }}assets/js/config.js" defer></script>
+<script src="{{ page.base }}assets/js/main.js" defer></script>
+{% for s in page.scripts %}<script src="{{ page.base }}{{ s }}" defer></script>
+{% endfor %}
+</body>
+</html>
