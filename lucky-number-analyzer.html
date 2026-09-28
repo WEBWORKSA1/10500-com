@@ -1,0 +1,43 @@
+---
+{"title":"Lucky Number Analyzer — Is Your Phone Number, Plate or Address Lucky?","description":"Free Chinese lucky number checker. Score any phone number, licence plate, address, price, date or domain from 0–100 with digit meanings, lucky combinations (8, 168, 518, 888) and warnings (4, 14, 514).","keywords":"lucky number calculator phone number plate address chinese numerology 8 4","app":true,"scripts":["assets/js/data.js","assets/js/numbers.js","assets/js/tools.js"],"crumbs":[["Home",""],["Tools","tools.html"],["Lucky Number Analyzer","lucky-number-analyzer.html"]],"faq":[["How is the luck score calculated?","Each digit gets a weight based on its traditional homophone (8 = 发 prosper is strongly positive, 4 = 死 death is strongly negative, 6 and 9 are positive, 5 and 7 are mixed). The last four digits count about 60% more, because endings matter most. Famous combinations add bonuses or penalties: 168, 518, 888, 520 and 1314 add; 14, 514, 74 and 250 subtract. The result is scaled to 1–99."],["Why do the last digits matter most?","In Chinese number culture the ending is what people remember and repeat. Premium phone numbers are priced mainly by their last four digits (for example ****8888)."],["Is a number with a 4 always bad?","Not always. 3344 (生生世世, “life after life”) is positive, and in some contexts 4 is fine. Still, many buyers avoid 4, which affects resale value for plates, phone numbers and apartments."],["Is this fortune telling?","No. It's a cultural and educational tool that shows how Chinese speakers commonly perceive numbers. It makes no predictions."]]}
+---
+<div class="page-hero"><div class="container">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a> › <a href="tools.html">Tools</a> › Lucky Number Analyzer</nav>
+  <h1>Lucky Number Analyzer <span class="cn" style="color:var(--gold-2)">吉数</span></h1>
+  <p class="lead">Is your phone number, licence plate, address, price or domain lucky? Get a 0–100 score, the meaning of each digit and the famous combinations it contains, all based on Chinese number culture.</p>
+</div></div>
+<section style="padding-top:30px"><div class="container layout-side">
+<div>
+  <div class="tool" id="analyzer">
+    <div class="seg" role="tablist" aria-label="Number type" style="margin-bottom:14px">
+      <button type="button" data-mode="phone">📱 Phone</button><button type="button" data-mode="plate">🚗 Plate</button><button type="button" data-mode="address">🏠 Address</button><button type="button" data-mode="price">🏷 Price</button><button type="button" data-mode="date">📅 Date</button><button type="button" data-mode="domain">🌐 Domain</button>
+    </div>
+    <form id="an-form" class="inline-form">
+      <label for="an-input" class="hp">Number</label>
+      <input id="an-input" type="text" autocomplete="off" required placeholder="e.g. 138 8888 1688">
+      <button class="btn btn-primary" type="submit">Analyze →</button>
+    </form>
+    <p class="small muted" style="margin-top:10px">Try: <button class="copy" data-example="10500">10500</button> <button class="copy" data-example="13888881688">138 8888 1688</button> <button class="copy" data-example="5201314">5201314</button> <button class="copy" data-example="4414">4414</button> <button class="copy" data-example="20260808">2026-08-08</button></p>
+    <div class="result" id="an-result" aria-live="polite"></div>
+  </div>
+  <div class="ad-slot" data-slot="incontent"></div>
+  <article class="prose">
+    <h2>How Chinese number luck works</h2>
+    <p>Chinese number symbolism rests on <b>homophones</b>, words that sound alike. 八 (bā, 8) sounds like 发 (fā, to prosper), so 8 is prized. 四 (sì, 4) sounds like 死 (sǐ, death), so it is avoided. 六 (liù, 6) sounds like 溜 (smooth), and 九 (jiǔ, 9) sounds like 久 (long-lasting).</p>
+    <p>Combinations read like short phrases. <b>168</b> (yī liù bā) is heard as 一路发, “prosper all the way”. <b>518</b> is 我要发, “I will prosper”. <b>514</b> is 我要死, “I'm going to die”, and nobody wants that on their licence plate.</p>
+    <h3>Examples</h3>
+    <div class="table-wrap"><table><thead><tr><th>Number</th><th>Reading</th><th>Why</th></tr></thead><tbody>
+      <tr><td><b>8888-8888</b></td><td>发发发发…</td><td>Sold for ¥2.33 million in Chengdu, 2003</td></tr>
+      <tr><td><b>28</b></td><td>易发 (easy prosperity)</td><td>Hong Kong plate sold for HK$18.1M in 2016</td></tr>
+      <tr><td><b>10500</b></td><td>一万零五百</td><td>万 = myriad, 五 = Five Blessings. Positive, though it has no 8</td></tr>
+      <tr><td><b>1314</b></td><td>一生一世 (forever)</td><td>The one popular number where the 4 reads as positive</td></tr>
+    </tbody></table></div>
+    {% include cta.html %}
+    <h3>Tips for choosing a lucky number</h3>
+    <ol><li>Protect the <b>ending</b>: the last 2–4 digits carry the most weight.</li><li>Replace 4s where you can, and avoid 14, 54, 74 and 514 in particular.</li><li>Look for phrases: 168, 518, 1688, 5188, 6868 and 998.</li><li>Match the purpose: 520 and 1314 suit romance, 8s suit business, and 9s suit longevity and anniversaries.</li><li>Consider resale value. Buyers in Chinese-speaking markets pay extra for 8s and avoid 4s.</li></ol>
+    <p>Want to go deeper? Read <a href="blog/chinese-lucky-numbers-guide.html">the complete guide to Chinese lucky numbers</a> or browse the <a href="number-meanings.html">number meanings database</a>.</p>
+    <p class="small muted">Sources: Guinness World Records; Bloomberg (2016); StudyCLI Chinese numerology overview.</p>
+  </article>
+</div>
+{% include sidebar.html %}
+</div></section>

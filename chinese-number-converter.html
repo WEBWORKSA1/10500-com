@@ -1,0 +1,35 @@
+---
+{"title":"Chinese Number Converter — Numbers to 汉字, 大写 Financial & Pinyin","description":"Convert numbers to Chinese characters (一万零五百), financial capital numerals for cheques and invoices (壹万零伍佰元整), traditional characters and pinyin, and convert back. Free, instant, with audio.","keywords":"chinese number converter daxie 大写 cheque financial numerals pinyin traditional","app":true,"scripts":["assets/js/numbers.js","assets/js/tools.js"],"crumbs":[["Home",""],["Tools","tools.html"],["Chinese Number Converter","chinese-number-converter.html"]],"faq":[["What is 大写 (dàxiě)?","大写 are “capital” Chinese numerals (壹贰叁肆伍陆柒捌玖拾佰仟). They are used on cheques, invoices, receipts and contracts because simple strokes like 一 or 二 can be altered easily (一 → 二 → 三). The financial form of 10500 yuan is 壹万零伍佰元整."],["When do I add 整 (zhěng)?","Add 整 (“exactly”) after 元 when there are no 角 or 分. For example, 10500.00 is 壹万零伍佰元整. Many people also add 整 after 角 when there are no 分."],["How do I write zeros?","Inside a number, a run of empty places becomes one 零: 10,500 is 一万零五百 and 1,001 is 一千零一. Trailing zeros are dropped: 10,500 ends in 五百, not 五百零零."],["Is 一万五 the same as 10,500?","No. 一万五 is colloquial for 15,000 (一万五千). For 10,500 you must say 一万零五百."]]}
+---
+<div class="page-hero"><div class="container">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a> › <a href="tools.html">Tools</a> › Chinese Number Converter</nav>
+  <h1>Chinese Number Converter <span class="cn" style="color:var(--gold-2)">数字转换</span></h1>
+  <p class="lead">Numbers to Chinese characters and back. Get standard 小写, financial 大写 for cheques and invoices (with 元角分整), traditional characters, pinyin and audio.</p>
+</div></div>
+<section style="padding-top:30px"><div class="container layout-side">
+<div>
+  <div class="tool" id="converter">
+    <div class="seg" style="margin-bottom:14px"><button type="button" data-dir="a2c">123 → 汉字</button><button type="button" data-dir="c2a">汉字 → 123</button></div>
+    <form id="cv-form" class="inline-form">
+      <label for="cv-input" class="hp">Number</label>
+      <input id="cv-input" type="text" autocomplete="off" required placeholder="e.g. 10500 or 10500.50">
+      <button class="btn btn-primary" type="submit">Convert →</button>
+    </form>
+    <p class="small muted" style="margin-top:10px">Try: <button class="copy" data-example="10500">10500</button> <button class="copy" data-example="10500.05">10500.05</button> <button class="copy" data-example="123456789">123456789</button> <button class="copy" data-d="c2a" data-example="一万五">一万五</button> <button class="copy" data-d="c2a" data-example="壹万零伍佰元整">壹万零伍佰元整</button></p>
+    <div class="result" id="cv-result" aria-live="polite"></div>
+  </div>
+  <div class="ad-slot" data-slot="incontent"></div>
+  <article class="prose">
+    <h2>How Chinese numbers are built</h2>
+    <p>Chinese counts in groups of <b>four</b> digits, not three. The key units are 十 (10), 百 (100), 千 (1,000), <b>万 (10,000)</b> and <b>亿 (100,000,000)</b>. So 10,500 is “one 万, zero, five 百” (一万零五百), and 1,000,000 is 一百万 (a hundred 万).</p>
+    <div class="table-wrap"><table><thead><tr><th>Digit</th><th>小写</th><th>大写</th><th>Pinyin</th></tr></thead><tbody>
+      <tr><td>0</td><td>零</td><td>零</td><td>líng</td></tr><tr><td>1</td><td>一</td><td>壹</td><td>yī</td></tr><tr><td>2</td><td>二 / 两</td><td>贰</td><td>èr / liǎng</td></tr><tr><td>3</td><td>三</td><td>叁</td><td>sān</td></tr><tr><td>4</td><td>四</td><td>肆</td><td>sì</td></tr><tr><td>5</td><td>五</td><td>伍</td><td>wǔ</td></tr><tr><td>6</td><td>六</td><td>陆</td><td>liù</td></tr><tr><td>7</td><td>七</td><td>柒</td><td>qī</td></tr><tr><td>8</td><td>八</td><td>捌</td><td>bā</td></tr><tr><td>9</td><td>九</td><td>玖</td><td>jiǔ</td></tr><tr><td>10 / 100 / 1000</td><td>十 / 百 / 千</td><td>拾 / 佰 / 仟</td><td>shí / bǎi / qiān</td></tr><tr><td>10⁴ / 10⁸</td><td>万 / 亿</td><td>万 / 亿</td><td>wàn / yì</td></tr>
+    </tbody></table></div>
+    <h3>Writing money in 大写: step by step</h3>
+    <ol><li>Write the integer part in capital numerals: 10500 → 壹万零伍佰.</li><li>Add 元 (yuan).</li><li>Add 角 (0.1) and 分 (0.01) if present: .05 → 零伍分.</li><li>If there are no cents, finish with 整: 壹万零伍佰元整.</li><li>On a cheque, write 人民币 before the amount and leave no gaps.</li></ol>
+    {% include cta.html %}
+    <p>Learning Mandarin? Practise with our <a href="learn-chinese-numbers.html">number quiz game</a> or read <a href="blog/why-10500-is-not-yi-wan-wu.html">why 10,500 is not 一万五</a>.</p>
+  </article>
+</div>
+{% include sidebar.html %}
+</div></section>
