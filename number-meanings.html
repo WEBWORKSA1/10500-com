@@ -1,0 +1,22 @@
+---
+{"title":"Chinese Number Meanings — Lucky & Unlucky Numbers 0–9 and 40 Combinations","description":"What every digit means in Chinese culture and why: 8 = prosperity, 4 = death, 6 = smooth, 9 = long-lasting. Plus 168, 518, 520, 1314, 250, 514 and more in a searchable database with pronunciation.","keywords":"chinese number meanings lucky unlucky 8 4 520 1314 168 250 slang","scripts":["assets/js/data.js","assets/js/numbers.js","assets/js/tools.js"],"crumbs":[["Home",""],["Number Meanings","number-meanings.html"]],"faq":[["What is the luckiest number in Chinese culture?","8 (八, bā), because it sounds like 发 (fā), “to prosper”. The Beijing Olympics opened at 8:08 pm on 8 August 2008."],["What is the unluckiest number?","4 (四, sì), because it sounds like 死 (sǐ), “death”. Many buildings skip the 4th, 14th and 24th floors."],["What does 520 mean?","520 (wǔ èr líng) sounds like 我爱你 (wǒ ài nǐ), “I love you”. May 20 is an unofficial Valentine's Day in China."],["Why is 250 an insult?","二百五 (èr bǎi wǔ) is slang for a fool. Never give ¥250 as a gift."]]}
+---
+<div class="page-hero"><div class="container">
+  <nav class="breadcrumb"><a href="index.html">Home</a> › Number Meanings</nav>
+  <h1>Chinese Number Meanings <span class="cn" style="color:var(--gold-2)">数字含义</span></h1>
+  <p class="lead">Every digit, and dozens of combinations, explained through the sound that gives it meaning. Tap 🔊 to hear the Mandarin.</p>
+</div></div>
+<section style="padding-top:30px" id="meanings-db"><div class="container">
+  <h2>The ten digits</h2>
+  <div class="grid g4" id="digit-grid"></div>
+  <div class="ad-slot" data-slot="incontent"></div>
+  <h2 style="margin-top:40px">Combinations &amp; slang</h2>
+  <div class="inline-form" style="margin-bottom:12px"><label for="md-q" class="hp">Search</label><input id="md-q" type="search" placeholder="Search: love, wealth, 520, avoid…"></div>
+  <div class="chip-group" style="margin-bottom:14px">
+    <button class="chip" data-filter="all" aria-pressed="true">All</button><button class="chip" data-filter="good" aria-pressed="false">Lucky</button><button class="chip" data-filter="bad" aria-pressed="false">Avoid</button><button class="chip" data-filter="wealth" aria-pressed="false">Wealth</button><button class="chip" data-filter="love" aria-pressed="false">Love</button><button class="chip" data-filter="slang" aria-pressed="false">Internet slang</button><button class="chip" data-filter="cantonese" aria-pressed="false">Cantonese</button>
+  </div>
+  <p class="small muted" id="md-count"></p>
+  <div class="table-wrap"><table><thead><tr><th>Number</th><th>Chinese</th><th>Meaning</th><th>Verdict</th></tr></thead><tbody id="md-body"></tbody></table></div>
+  <div class="cta-inline"><div><b>Test your own number</b><br><span class="small muted">Run any phone number, plate or price through the analyzer.</span></div><a class="btn btn-primary btn-sm" href="lucky-number-analyzer.html">Analyze a number →</a></div>
+  {% include cta.html %}
+</div></section>
