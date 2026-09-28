@@ -1,0 +1,51 @@
+---
+{"title":"Support 10500 — Donate, Become a Patron, Fund Free Tools","description":"10500 is free for everyone. Your donation funds hosting, new tools, video production, marketing, hiring writers and translators, and monthly contest prizes. One-time or monthly support.","keywords":"donate support patron sponsor","scripts":["assets/js/tools.js"],"crumbs":[["Home",""],["Support","support.html"]]}
+---
+<div class="page-hero"><div class="container">
+  <nav class="breadcrumb"><a href="index.html">Home</a> › Support 10500</nav>
+  <h1>Keep 10500 free for everyone <span class="cn" style="color:var(--red)">福</span></h1>
+  <p class="lead">No paywalls and no sign-ups. If a tool saved you time or an embarrassing red-envelope mistake, a small contribution keeps it running and growing.</p>
+</div></div>
+<section style="padding-top:30px"><div class="container">
+  <div class="grid g2" style="align-items:start">
+    <div class="lead-box" id="donate">
+      <span class="eyebrow">Make a contribution</span>
+      <h2 style="font-size:1.5rem">Choose an amount</h2>
+      <div class="chip-group" style="margin:10px 0 14px">
+        <button type="button" class="chip" data-amt="8" aria-pressed="false">$8</button><button type="button" class="chip" data-amt="18" aria-pressed="false">$18</button><button type="button" class="chip" data-amt="25" aria-pressed="true">$25</button><button type="button" class="chip" data-amt="88" aria-pressed="false">$88</button><button type="button" class="chip" data-amt="168" aria-pressed="false">$168</button><button type="button" class="chip" data-amt="888" aria-pressed="false">$888</button>
+      </div>
+      <div class="field"><label for="dn-custom">Or a custom amount (USD)</label><input id="dn-custom" type="number" min="1" placeholder="Other amount"></div>
+      <p>Your contribution: <b id="dn-amt" style="font-size:1.3rem;color:var(--red)">$25</b></p>
+      <div class="inline-form" id="dn-rails"></div>
+      <p class="form-note">Secure checkout on the payment provider's site. We never see your card details.</p>
+      <hr style="border:0;border-top:1px solid var(--line);margin:20px 0">
+      <h3 style="font-size:1.05rem">Prefer bank transfer, crypto, WeChat Pay / Alipay, or a large gift?</h3>
+      <form data-form="Donation pledge" data-success="Thank you! We'll email you payment details within 1 business day.">
+        <input type="hidden" name="amount" id="dn-amount-field" value="25">
+        <div class="row two"><div class="field"><label for="dn-name">Name</label><input id="dn-name" name="name"></div><div class="field"><label for="dn-email">Email *</label><input id="dn-email" type="email" name="email" required></div></div>
+        <div class="row two"><div class="field"><label for="dn-method">Method</label><select id="dn-method" name="method"><option>Bank transfer / wire</option><option>WeChat Pay</option><option>Alipay</option><option>Crypto (USDC/BTC/ETH)</option><option>Interac e-Transfer</option><option>Cheque</option></select></div><div class="field"><label for="dn-freq">Frequency</label><select id="dn-freq" name="frequency"><option>One-time</option><option>Monthly</option><option>Yearly</option></select></div></div>
+        <div class="field"><label for="dn-dedicate">Earmark for (optional)</label><select id="dn-dedicate" name="earmark"><option>Wherever it's needed most</option><option>Operations &amp; hosting</option><option>New tools</option><option>Videos &amp; creators</option><option>Marketing &amp; promotion</option><option>Hiring writers &amp; translators</option><option>Contest prizes</option></select></div>
+        <div class="field"><label for="dn-msg">Message (optional, may appear on our supporters wall)</label><input id="dn-msg" name="message"></div>
+        <label class="check"><input type="checkbox" name="public" value="yes"> List my name on the supporters wall</label>
+        <button class="btn btn-gold btn-block" style="margin-top:12px" type="submit">Send pledge</button>
+      </form>
+    </div>
+    <div>
+      <h2>Where your money goes</h2>
+      <div class="bar"><i style="width:30%;background:var(--red)"></i><i style="width:25%;background:var(--gold)"></i><i style="width:20%;background:#6b8afd"></i><i style="width:15%;background:var(--ok)"></i><i style="width:10%;background:var(--muted)"></i></div>
+      <div class="legend"><span style="--c:var(--red)">30% creators &amp; writers</span><span style="--c:var(--gold)">25% new tools &amp; development</span><span style="--c:#6b8afd">20% marketing &amp; promotion</span><span style="--c:var(--ok)">15% contest prizes</span><span style="--c:var(--muted)">10% operations</span></div>
+      <p class="small muted" style="margin-top:8px">Target allocation, reviewed quarterly.</p>
+      <h3 style="margin-top:28px">Supporter tiers</h3>
+      <div class="grid g2">
+        <div class="card"><b>🧧 Friend</b> · $8+/mo<p class="small muted" style="margin:4px 0 0">Name on the supporters wall and our thanks.</p></div>
+        <div class="card"><b>🏮 Patron</b> · $18+/mo<p class="small muted" style="margin:4px 0 0">Ad-free newsletter, early access to new tools.</p></div>
+        <div class="card"><b>🐉 Champion</b> · $88+/mo<p class="small muted" style="margin:4px 0 0">Vote on the next tool, plus a yearly personal number report.</p></div>
+        <div class="card"><b>🏯 Founder's Circle</b> · $888+<p class="small muted" style="margin:4px 0 0">Permanent credit, plus a quarterly call with the team.</p></div>
+      </div>
+      <div class="callout gold" style="margin-top:20px"><b>If everyone who used a tool this week gave $2.80</b> (roughly a coffee), we could fund our next tool and a month of contest prizes. Most readers don't give. If you can, thank you.</div>
+      <h3>Other ways to help</h3>
+      <ul class="feature-list"><li>Share a tool result with a friend</li><li><a href="careers.html">Contribute</a> as a writer, translator or creator</li><li><a href="advertise.html">Sponsor</a> a tool or contest</li><li>Donate a contest prize</li></ul>
+      <p class="small muted">10500.com is an independent publication, not a registered charity, so contributions are not tax-deductible.</p>
+    </div>
+  </div>
+</div></section>

@@ -1,0 +1,57 @@
+---
+{"title":"Contests & Prizes — The Monthly Lucky Number Challenge","description":"Enter the free monthly Lucky Number Challenge. Share your luckiest number story, photo or quiz streak for a chance to win cash, gift cards and sponsor prizes. Earn bonus entries by referring friends.","keywords":"contest giveaway prizes lucky number challenge","scripts":["assets/js/tools.js"],"crumbs":[["Home",""],["Contests","contests.html"]]}
+---
+<div class="page-hero" style="background:linear-gradient(135deg,var(--gold-soft),var(--bg))"><div class="container" id="contest">
+  <nav class="breadcrumb"><a href="index.html">Home</a> › Contests &amp; Prizes</nav>
+  <div class="grid g2" style="align-items:center">
+    <div>
+      <span class="eyebrow">Lucky Number Challenge · <span id="ct-month"></span></span>
+      <h1>Share your luckiest number. <span style="color:var(--red)">Win prizes.</span></h1>
+      <p class="lead">Each month we pick a theme and the best entries win. It's free to enter, you get bonus entries for every friend you refer, and winners are drawn openly.</p>
+      <div class="countdown" aria-label="Time left"><div><b id="cd-d">0</b><small>days</small></div><div><b id="cd-h">0</b><small>hrs</small></div><div><b id="cd-m">0</b><small>min</small></div><div><b id="cd-s">0</b><small>sec</small></div></div>
+    </div>
+    <div class="card"><h3>🏆 This month's prize pool</h3>
+      <ul class="feature-list"><li><b>1st:</b> $188 cash or gift card + a premium Lucky Number Report</li><li><b>2nd:</b> $88 gift card</li><li><b>3rd:</b> $38 gift card + feature on our site and channel</li><li><b>10 runners-up:</b> an 8-pack of luxury red envelopes</li></ul>
+      <p class="small muted">Prizes are funded by <a href="support.html">supporters</a> and <a href="advertise.html#packages">sponsors</a>. Want to sponsor a prize?</p></div>
+  </div>
+</div></div>
+<section><div class="container">
+  <div class="section-head"><span class="eyebrow">This month's theme</span><h2>“The number that changed my luck”</h2><p class="lead">Tell us about a lucky (or unlucky!) number in your life: a phone number, an address, a wedding date, a price you negotiated, or your best <a href="learn-chinese-numbers.html#quiz">quiz streak</a>. Creativity counts.</p></div>
+  <div class="grid g2" style="align-items:start">
+    <div class="lead-box">
+      <h3>Enter free</h3>
+      <form data-form="Contest entry" data-redirect="thank-you.html?type=contest">
+        <div class="row two"><div class="field"><label for="ce-name">Name *</label><input id="ce-name" name="name" required></div><div class="field"><label for="ce-email">Email *</label><input id="ce-email" type="email" name="email" required></div></div>
+        <div class="row two"><div class="field"><label for="ce-country">Country *</label><input id="ce-country" name="country" required></div><div class="field"><label for="ce-num">Your number</label><input id="ce-num" name="number" placeholder="e.g. 168"></div></div>
+        <div class="field"><label for="ce-story">Your story (50–500 words) *</label><textarea id="ce-story" name="story" required minlength="50"></textarea></div>
+        <div class="field"><label for="ce-link">Photo / video link (optional)</label><input id="ce-link" type="url" name="media_link" placeholder="Instagram, TikTok, YouTube, Drive…"></div>
+        <div class="field"><label for="ce-ref">Referred by (code)</label><input id="ce-ref" name="referred_by" placeholder="optional"></div>
+        <label class="check"><input type="checkbox" name="age_ok" value="yes" required> I am 18 or older (or the age of majority where I live). *</label>
+        <label class="check" style="margin-top:6px"><input type="checkbox" name="rules_ok" value="yes" required> I accept the <a href="#rules">Official Rules</a> and <a href="privacy.html">Privacy Policy</a>, and I grant 10500 permission to feature my entry. *</label>
+        <label class="check" style="margin-top:6px"><input type="checkbox" name="newsletter" value="yes"> Send me the weekly Lucky Number email (optional).</label>
+        <button class="btn btn-primary btn-block" style="margin-top:14px" type="submit">Submit my entry 🍀</button>
+      </form>
+    </div>
+    <div>
+      <div class="card"><h3>🎟 Earn bonus entries</h3><p class="small muted">Get your personal link and share it. Every friend who enters with your code gives you +3 entries.</p>
+        <form id="ref-gen" class="inline-form"><label class="hp" for="ref-name">Your name</label><input id="ref-name" placeholder="Your first name" required><button class="btn btn-gold btn-sm" type="submit">Get my link</button></form>
+        <div id="ref-out" style="margin-top:10px"></div></div>
+      <div class="card" style="margin-top:16px"><h3>📅 How it works</h3><ol class="small"><li>Enter any time before the last day of the month (23:59, UTC-5).</li><li>A panel shortlists the 20 best entries on creativity, story and cultural insight.</li><li>Winners are drawn or selected within 7 days and announced on this page and by email.</li><li>Prizes are delivered within 30 days.</li></ol></div>
+      <div class="card" style="margin-top:16px"><h3>🥇 Hall of fame</h3><p class="small muted">Our first winners will be featured here. Yours could be the first story.</p></div>
+    </div>
+  </div>
+</div></section>
+<section class="section-alt" id="rules"><div class="container prose">
+  <h2>Official Rules (summary)</h2>
+  <ol class="small">
+    <li><b>No purchase necessary.</b> A purchase or donation does not improve your chances of winning. Void where prohibited or restricted by law.</li>
+    <li><b>Eligibility:</b> open worldwide to individuals who are 18 or older (or the age of majority in their jurisdiction), except where prohibited. Employees of 10500 and prize sponsors, and their immediate families, are not eligible.</li>
+    <li><b>Entry period:</b> from the first to the last day of each calendar month. Limit one story entry per person per month. Referral bonus entries are capped at 30 per person.</li>
+    <li><b>Judging:</b> entries are judged on creativity (40%), storytelling (30%) and cultural insight (30%). Where a random draw is used, it is conducted verifiably among eligible entries.</li>
+    <li><b>Prizes:</b> as listed for the month. They are non-transferable, and cash alternatives are at our discretion. Winners are responsible for any taxes. Winners in Canada may need to answer a skill-testing question.</li>
+    <li><b>Disqualification:</b> duplicate or fake accounts, bots, plagiarism, or offensive content.</li>
+    <li><b>License:</b> you keep ownership of your entry and grant 10500 a non-exclusive, royalty-free license to display it with credit.</li>
+    <li><b>Privacy:</b> entry data is used to run the contest and contact winners. See our <a href="privacy.html">Privacy Policy</a>.</li>
+    <li><b>Sponsor:</b> 10500.com. This contest is not sponsored, endorsed or administered by, or associated with, Instagram, TikTok, YouTube, Facebook or any other platform.</li>
+  </ol>
+</div></section>
