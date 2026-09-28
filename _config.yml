@@ -1,0 +1,10 @@
+title: "10500 — Numbers · Luck · Prosperity"
+url: "https://10500.com"
+baseurl: ""
+timezone: Asia/Shanghai
+exclude: [README.md, project-docs, Gemfile, Gemfile.lock, vendor]
+defaults:
+  - scope: { path: "" }
+    values: { layout: default, base: "" }
+  - scope: { path: "blog" }
+    values: { base: "../" }
