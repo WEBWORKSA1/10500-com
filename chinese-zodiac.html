@@ -1,0 +1,35 @@
+---
+{"title":"Chinese Zodiac Calculator — Accurate Sign, Element, Lunar Birthday & Compatibility","description":"Find your true Chinese zodiac sign, adjusted for the Lunar New Year date. Get your element, yin/yang and lunar birthday, and check the compatibility of any two signs (trines, six harmonies, clashes).","keywords":"chinese zodiac calculator lunar birthday compatibility element year of the horse","app":true,"scripts":["assets/js/data.js","assets/js/tools.js"],"crumbs":[["Home",""],["Tools","tools.html"],["Chinese Zodiac","chinese-zodiac.html"]],"faq":[["Why is my sign different from the Gregorian year?","The zodiac year starts at Lunar New Year, which falls between January 21 and February 20. If you were born in January or early February, you may belong to the previous year's animal. Our calculator uses the Chinese lunar calendar built into your browser to get this right."],["How is the element determined?","By the last digit of the lunar year: 0–1 Metal, 2–3 Water, 4–5 Wood, 6–7 Fire, 8–9 Earth. Even years are Yang and odd years are Yin. 2026 is a Fire Horse year."],["How does compatibility work?","Traditional compatibility groups the 12 animals into trines (三合, most harmonious), six harmonies (六合), clashes (六冲, opposite signs) and harms (六害). It's folklore, but people still consult it for weddings and partnerships."]]}
+---
+<div class="page-hero"><div class="container">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a> › <a href="tools.html">Tools</a> › Chinese Zodiac</nav>
+  <h1>Chinese Zodiac &amp; Lunar Birthday <span class="cn" style="color:var(--gold-2)">生肖</span></h1>
+  <p class="lead">Most zodiac sites get January and February birthdays wrong. We use the real Chinese lunar calendar to find your sign, element, yin/yang and lunar birthday, then check your compatibility.</p>
+</div></div>
+<section style="padding-top:30px"><div class="container layout-side">
+<div id="zodiac">
+  <div class="tool">
+    <h2 style="font-size:1.3rem">1 · Find your sign</h2>
+    <form id="zd-form" class="inline-form"><label for="zd-date" class="hp">Birth date</label><input id="zd-date" type="date" required min="1900-01-01" max="2100-12-31" value="1990-01-20"><button class="btn btn-primary" type="submit">Find my sign →</button></form>
+    <div class="result" id="zd-result" aria-live="polite"></div>
+  </div>
+  <div class="tool" style="margin-top:20px">
+    <h2 style="font-size:1.3rem">2 · Check compatibility</h2>
+    <form id="zc-form"><div class="row two"><div class="field"><label for="zc-a">Your sign</label><select id="zc-a"></select></div><div class="field"><label for="zc-b">Their sign</label><select id="zc-b"></select></div></div><button class="btn btn-primary btn-block" type="submit">Check match ❤</button></form>
+    <div class="result" id="zc-result" aria-live="polite"></div>
+  </div>
+  <div class="ad-slot" data-slot="incontent"></div>
+  <h2>The 12 animals and their years</h2>
+  <div class="grid g3" id="zd-grid"></div>
+  <article class="prose" style="margin-top:30px">
+    <h2>Compatibility at a glance</h2>
+    <div class="table-wrap"><table><thead><tr><th>Group</th><th>Signs</th></tr></thead><tbody>
+      <tr><td>Trine 1 (三合)</td><td>Rat · Dragon · Monkey</td></tr><tr><td>Trine 2</td><td>Ox · Snake · Rooster</td></tr><tr><td>Trine 3</td><td>Tiger · Horse · Dog</td></tr><tr><td>Trine 4</td><td>Rabbit · Goat · Pig</td></tr>
+      <tr><td>Clashes (六冲)</td><td>Rat–Horse · Ox–Goat · Tiger–Monkey · Rabbit–Rooster · Dragon–Dog · Snake–Pig</td></tr>
+    </tbody></table></div>
+    <p>Planning a wedding or grand opening? Our <a href="concierge.html?service=consult">date-selection specialists</a> can pick an auspicious day using the traditional almanac (通书).</p>
+    {% include cta.html %}
+  </article>
+</div>
+{% include sidebar.html %}
+</div></section>

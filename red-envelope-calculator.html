@@ -1,0 +1,38 @@
+---
+{"title":"Red Envelope (Hongbao) Calculator — How Much to Give","description":"How much money to put in a red envelope for a Chinese wedding, Lunar New Year, birthday, baby's full month, graduation, business opening or funeral. Lucky amounts by region: China, Hong Kong, Taiwan, Singapore, Malaysia, USA/Canada.","keywords":"red envelope amount hongbao lai see wedding how much give chinese new year funeral","app":true,"scripts":["assets/js/tools.js"],"crumbs":[["Home",""],["Tools","tools.html"],["Red Envelope Calculator","red-envelope-calculator.html"]],"faq":[["How much should I give at a Chinese wedding?","Many guests aim to at least cover the cost of their banquet seat, then adjust for closeness. In tier-1 Chinese cities, friends commonly give about ¥600–¥1,000. In Taiwan, NT$1,600–NT$3,600 is common. In the US or Canada, US$100–$200 is typical. Use lucky even amounts and avoid anything with a 4."],["Why avoid 4 in a red envelope?","四 (sì, four) sounds like 死 (sǐ, death), so 4, 40 and 400 are considered unlucky gifts, especially at weddings."],["What about funerals?","Funeral money (帛金 / 白金) goes in a white envelope, never a red one. Many communities give odd amounts, such as 101 or 201."],["Should the notes be new?","Yes. Crisp, new notes are traditional, especially for Lunar New Year, because they symbolise a fresh start."]]}
+---
+<div class="page-hero"><div class="container">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a> › <a href="tools.html">Tools</a> › Red Envelope Calculator</nav>
+  <h1>Red Envelope Calculator <span class="cn" style="color:var(--red)">红包</span></h1>
+  <p class="lead">Never over-give or under-give again. Pick the occasion, region and relationship, and get a culturally appropriate, lucky amount that avoids unlucky 4s.</p>
+</div></div>
+<section style="padding-top:30px"><div class="container layout-side">
+<div>
+  <div class="tool" id="hongbao">
+    <form id="hb-form">
+      <div class="row two">
+        <div class="field"><label for="hb-occasion">Occasion</label><select id="hb-occasion"><option value="wedding">💍 Wedding</option><option value="lny">🧧 Lunar New Year</option><option value="birthday">🎂 Birthday (elder / milestone)</option><option value="baby">👶 Baby's full month (满月)</option><option value="grad">🎓 Graduation / exam success</option><option value="business">🏪 Business opening</option><option value="house">🏠 Housewarming</option><option value="funeral">🤍 Funeral (white envelope)</option></select></div>
+        <div class="field"><label for="hb-region">Where are you?</label><select id="hb-region"><option value="cn1">Mainland China: tier-1 city (CNY)</option><option value="cn2">Mainland China: other city (CNY)</option><option value="hk">Hong Kong (HKD)</option><option value="tw">Taiwan (TWD)</option><option value="sg">Singapore (SGD)</option><option value="my">Malaysia (MYR)</option><option value="na">USA / Canada (USD/CAD)</option><option value="eu">UK / Europe / Australia</option></select></div>
+      </div>
+      <div class="row two">
+        <div class="field"><label for="hb-rel">Your relationship</label><select id="hb-rel"><option value="friend">Friend</option><option value="close">Close friend</option><option value="family">Immediate family</option><option value="relative">Relative (cousin, aunt, uncle)</option><option value="coworker">Coworker</option><option value="acq">Acquaintance</option><option value="employee">My employee (I'm the boss)</option><option value="child">A child (niece, nephew, friend's kid)</option></select></div>
+        <div class="field"><label for="hb-close">Closeness: <span id="hb-close-out">Normal</span></label><input id="hb-close" type="range" min="1" max="5" value="3" style="width:100%;accent-color:var(--red)"></div>
+      </div>
+      <button class="btn btn-primary btn-block" type="submit">🧧 Calculate my amount</button>
+    </form>
+    <div class="result" id="hb-result" aria-live="polite"></div>
+  </div>
+  <div class="ad-slot" data-slot="incontent"></div>
+  <article class="prose">
+    <h2>Red envelope etiquette in 60 seconds</h2>
+    <ul><li><b>Colour:</b> red for happy occasions and white for funerals. Never mix them up.</li><li><b>Amount:</b> even numbers for celebrations (weddings especially), and anything with 6, 8 or 9. No 4s.</li><li><b>Notes:</b> new and crisp. Avoid coins and avoid mixing many small notes.</li><li><b>Giving:</b> use both hands, with a greeting: 恭喜发财 (New Year), 百年好合 (weddings).</li><li><b>Receiving:</b> don't open it in front of the giver.</li><li><b>Digital:</b> WeChat and Alipay red packets are normal in mainland China. The same number rules apply, and 520 and 1314 are popular romantic amounts.</li></ul>
+    <h3>Popular lucky amounts</h3>
+    <div class="table-wrap"><table><thead><tr><th>Amount</th><th>Meaning</th><th>Best for</th></tr></thead><tbody>
+      <tr><td>88 / 888</td><td>Double / triple prosperity</td><td>New Year, business</td></tr><tr><td>168 / 1688</td><td>Prosper all the way</td><td>Business openings</td></tr><tr><td>520 / 1314</td><td>I love you / forever</td><td>Partners, weddings</td></tr><tr><td>99 / 999</td><td>Long-lasting</td><td>Weddings, anniversaries</td></tr><tr><td>600 / 666</td><td>Smooth going</td><td>Graduation, new jobs</td></tr><tr><td>101 / 201 (white)</td><td>Odd amounts</td><td>Funerals (many communities)</td></tr>
+    </tbody></table></div>
+    <p>Full guide: <a href="blog/red-envelope-etiquette-amounts.html">Red envelope etiquette &amp; amounts by occasion</a>.</p>
+    {% include cta.html %}
+  </article>
+</div>
+{% include sidebar.html %}
+</div></section>

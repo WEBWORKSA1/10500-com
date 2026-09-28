@@ -1,0 +1,50 @@
+---
+{"title":"China Salary Calculator 2026 — Net Pay After Tax, Social Insurance & Housing Fund","description":"Calculate take-home pay in China: individual income tax (IIT) brackets, ¥5,000 threshold, social insurance (8% + 2% + 0.5%), housing provident fund and special deductions. Compare with the 2025 national average wage.","keywords":"china salary calculator after tax iit social insurance housing fund net pay expat","app":true,"scripts":["assets/js/tools.js"],"crumbs":[["Home",""],["Tools","tools.html"],["China Salary Calculator","china-salary-calculator.html"]],"faq":[["What is the income tax threshold in China?","The basic deduction is ¥5,000 per month (¥60,000 per year). Social insurance, housing fund contributions and special additional deductions are subtracted before tax."],["What are China's income tax brackets?","Annual comprehensive income is taxed progressively: 3% up to ¥36,000; 10% to ¥144,000; 20% to ¥300,000; 25% to ¥420,000; 30% to ¥660,000; 35% to ¥960,000; 45% above that."],["How much social insurance do employees pay?","Typically pension 8%, medical 2% (plus a small fixed amount in some cities) and unemployment 0.5%, about 10.5% in total, on a contribution base that has city-specific floors and caps. The housing provident fund is 5–12%."],["What is the average salary in China?","According to the National Bureau of Statistics, the 2025 average annual wage was ¥129,441 in urban non-private units (about ¥10,787 per month) and ¥71,590 in urban private units (about ¥5,966 per month)."]]}
+---
+<div class="page-hero"><div class="container">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a> › <a href="tools.html">Tools</a> › China Salary Calculator</nav>
+  <h1>China Salary Calculator <span class="cn" style="color:var(--gold-2)">税后工资</span></h1>
+  <p class="lead">What does a ¥10,500 monthly salary actually pay? Enter any gross salary to see income tax, social insurance, housing fund and net pay, compared with official national averages.</p>
+</div></div>
+<section style="padding-top:30px"><div class="container layout-side">
+<div>
+  <div class="tool" id="salary">
+    <form id="sc-form">
+      <div class="row two">
+        <div class="field"><label for="sc-gross">Gross monthly salary (¥)</label><input id="sc-gross" type="number" min="0" step="100" value="10500" required></div>
+        <div class="field"><label for="sc-sd">Special additional deductions / month (¥)</label><input id="sc-sd" type="number" min="0" step="100" value="0"></div>
+      </div>
+      <details style="margin-bottom:14px"><summary style="cursor:pointer;font-weight:700">Advanced: contribution rates &amp; base</summary>
+        <div class="row three" style="margin-top:12px">
+          <div class="field"><label for="sc-pen">Pension %</label><input id="sc-pen" type="number" step="0.1" value="8"></div>
+          <div class="field"><label for="sc-med">Medical %</label><input id="sc-med" type="number" step="0.1" value="2"></div>
+          <div class="field"><label for="sc-une">Unemployment %</label><input id="sc-une" type="number" step="0.1" value="0.5"></div>
+        </div>
+        <div class="row two">
+          <div class="field"><label for="sc-hf">Housing fund % (5–12)</label><input id="sc-hf" type="number" step="1" min="0" max="12" value="7"></div>
+          <div class="field"><label for="sc-base">Contribution base (¥, blank = gross)</label><input id="sc-base" type="number" min="0" step="100" placeholder="e.g. city cap"></div>
+        </div>
+      </details>
+      <button class="btn btn-primary btn-block" type="submit">Calculate net pay</button>
+    </form>
+    <div class="result" id="sc-result" aria-live="polite"></div>
+  </div>
+  <div class="ad-slot" data-slot="incontent"></div>
+  <article class="prose">
+    <h2>How Chinese payroll deductions work</h2>
+    <ol><li><b>Social insurance (五险):</b> the employee pays about 10.5% (pension 8%, medical 2%, unemployment 0.5%). The employer pays considerably more.</li><li><b>Housing provident fund (公积金):</b> 5–12%, matched by the employer.</li><li><b>Individual income tax (个税):</b> charged on salary minus the above, minus ¥5,000, minus special additional deductions.</li></ol>
+    <h3>Special additional deductions (monthly, current standards)</h3>
+    <div class="table-wrap"><table><thead><tr><th>Item</th><th>Standard</th></tr></thead><tbody>
+      <tr><td>Children's education (per child)</td><td>¥2,000</td></tr><tr><td>Infant care, under 3 (per child)</td><td>¥2,000</td></tr><tr><td>Supporting elderly parents</td><td>up to ¥3,000 (shared among siblings)</td></tr><tr><td>Housing loan interest</td><td>¥1,000</td></tr><tr><td>Housing rent</td><td>¥800 / ¥1,100 / ¥1,500 by city size</td></tr><tr><td>Continuing education</td><td>¥400</td></tr>
+    </tbody></table></div>
+    <h3>Annual IIT brackets</h3>
+    <div class="table-wrap"><table><thead><tr><th>Annual taxable income</th><th>Rate</th><th>Quick deduction</th></tr></thead><tbody>
+      <tr><td>≤ ¥36,000</td><td>3%</td><td>0</td></tr><tr><td>¥36,000–144,000</td><td>10%</td><td>2,520</td></tr><tr><td>¥144,000–300,000</td><td>20%</td><td>16,920</td></tr><tr><td>¥300,000–420,000</td><td>25%</td><td>31,920</td></tr><tr><td>¥420,000–660,000</td><td>30%</td><td>52,920</td></tr><tr><td>¥660,000–960,000</td><td>35%</td><td>85,920</td></tr><tr><td>&gt; ¥960,000</td><td>45%</td><td>181,920</td></tr>
+    </tbody></table></div>
+    <p>Read the data story: <a href="blog/china-average-salary-2025.html">China's average salary in 2025 and what ¥10,500 a month means</a>.</p>
+    {% include cta.html %}
+    <p class="small muted">Sources: National Bureau of Statistics of China, “Average Annual Wages of Employees in Urban Units in 2025” (May 2026); PRC Individual Income Tax Law schedules. City rules vary. This is not tax advice.</p>
+  </article>
+</div>
+{% include sidebar.html %}
+</div></section>
